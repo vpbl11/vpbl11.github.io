@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>OS VICIADOS EM GIBIS E FILMES</title>
+<meta name="author" content="VICTOR BARROS LEMOS"/>
+<meta http-equiv="content-type" charset="utf-8"/>
+<meta name="description" content="site lindaum" />
+<meta name="keywords" content="html5, css3, responsive, responsivo" />
+<link rel="stylesheet" type="text/css" href="css/estiloquiz.css">
+<link rel="shortcut icon" href="img/iconeaba.ico"  />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body class="center clearfix">
+	<header>
+		<h1><a href="index.html" title="VBL"><span></span></a></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="críticas.html">Críticas</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="notícias.html">Notícias</a></li>
+				<li><a href="listas.html">Listas</a></li>
+				<li><a href="index.html#Fale_Conosco">Fale Conosco</a></a></li>							
+			</ul>
+		</nav> <!-- Fim do menu de navegação -->
+	</header> <!-- fim do cabeçalho da pagina -->
+	<section class="chamada">
+		<h2><span>Quiz</span></h2>
+			</section> <!-- setor de título e descrição do site -->
+	<section class="container">
+		<div class="desktop">
+	<style type=text/css>
+#center{font-family:arial;font-size:8pt;color:#696969;}
+#pergunta{background-color:#112637;font-family:arial;font-size:8pt;color:#696969;}
+#resposta{background-color:#112637;font-family:arial;font-size:8pt;color:#696969;}
+#input{border:1px solid #cccccc;background-color:#112637;font-family:arial;font-size:8pt;color:#696969;}
+#normal{font-family:arial;font-size:8pt;color:#696969;text-decoration:none;}
+input{font-family:arial;font-size:8pt;color:#1c1c1c;}
+</style>
+
+<script language="JavaScript"> 
+/* início do código  */
+<!-- 
+var pontos=0; 
+function reponse(form) { 
+for (var i=0;i<form.length;i++){ 
+ if (form[i].checked){ 
+  break 
+ } 
+} 
+var answer="" 
+if (i<form.length){ 
+ answer = form[i].value 
+} 
+return answer; 
+} 
+
+function solution(form) { 
+/* variável para cada pergunta */
+var points=0;var rep="";var comment="";var resposta1="";var resposta2="";var resposta3="";var onome=""
+
+/* valor de pontos para as questões */
+if (reponse(form.question1)=="") {pontos+=1} 
+if (reponse(form.question2)=="") {pontos+=1} 
+if (reponse(form.question3)=="") {pontos+=1} 
+
+/* cada mensagem vai de acordo com o input marcado para resposta */
+
+/* mensagem para questão 1 */
+if (reponse(form.question1)=="") {resposta1="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question1)=="A") {resposta1="<font color=#cccccc>incorreta</font>"} 
+if (reponse(form.question1)=="B") {resposta1="<font color=#0099cc>correta</font>"}
+if (reponse(form.question1)=="C") {resposta1="<font color=#cccccc>incorreta</font>"}
+
+/* mensagem para questão 2 */
+if (reponse(form.question2)=="") {resposta2="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question2)=="A") {resposta2="<font color=#0099cc>correta</font>"} 
+if (reponse(form.question2)=="B") {resposta2="<font color=#cccccc>incorreta</font>"}
+if (reponse(form.question2)=="C") {resposta2="<font color=#cccccc>incorreta</font>"}
+
+/* mensagem para questão 3 */
+if (reponse(form.question3)=="") {resposta3="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question3)=="A") {resposta3="<font color=#cccccc>incorreta</font>"} 
+if (reponse(form.question3)=="B") {resposta3="<font color=#0099cc>correta</font>"}
+if (reponse(form.question3)=="C") {resposta3="<font color=#cccccc>incorreta</font>"}
+
+/* aqui é exibido a mensagem de acordo com o ponto marcado */
+if (pontos==0) {comment="você não fez pontos, tente novamente"}
+if (pontos==1) {comment="você fez um ponto, continue assim"}
+if (pontos==2) {comment="você fez 2 pontos, está quase lá"}
+if (pontos==3) {comment="excelente! você acertou todas!<br><br><a href=\"javascript:;\" onClick=\"window.print();return false\">Imprimir este certificado</a><br>Veja o seu certificado abaixo:<br><br><img src=img_certificado.gif border=0>"}
+
+/* aqui exibo a porcentagem de acordo com o ponto  */
+if (pontos==0) {porcentagem="0%"}
+if (pontos==1) {porcentagem="33%"}
+if (pontos==2) {porcentagem="66%"}
+if (pontos==3) {porcentagem="100%"}
+
+/* aqui inicio o código mostrado na nova janela */
+chaine='' 
++'<head><title>Resultado</title>'
++'<style type=text/css>a{font-family:arial;font-size:8pt;color:#696969;text-decoration:none;}#texto{font-family:verdana,arial;font-size:8pt;color:#696969;}#textos{font-family:verdana,arial;font-size:10px;color:#c7c7c7;}input{border:1px solid #f8f8f8;background-color:fefefe;font-family:arial;font-size:8pt;color:#1c1c1c;}#resultado{font-family:arial;font-size:8pt;color:#696969;}</style>'
++'</head>'
++'<center><font id=texto>Você atingiu um total de <font color=#0099cc><b>'+ pontos +'</b></font> pontos, acertando '+ porcentagem +' das questões.<br><br><font color=#696969>'+comment+'<BR>' 
+
++'<br><center><font id=texto>'+ formmail.onome.value +' veja abaixo o resumo das questões:</font></center><br>'
+
++'<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width="150">'
++"<tr><td><font id=textos>1)</td><td><font id=resultado>"+ resposta1 +"</font></td></tr>"
++"<tr><td><font id=textos>2)</td><td><font id=resultado>"+ resposta2 +"</font></td></tr>"
++"<tr><td><font id=textos>3)</td><td><font id=resultado>"+ resposta3 +"</font></td></tr>"
++"</table></form>"
++'<a href="javascript:void(0)" onclick="javascript:window.close()">FECHAR</a>'
++'</CENTER></BODY></HTML>' 
+solu=open(); 
+solu.document.write(chaine) 
+} 
+//--> 
+</script> 
+<title>Questionário</title> 
+<script>
+function vai() {
+location.reload()
+}
+</script>
+
+<!--ABAIXO SEGUE O FORMULÁRIO-->
+<form name=formmail>
+<center><font id=center>Responda as perguntas abaixo</font></center>
+<br>
+<div align=center> 
+<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#112637;" width=400>
+<tr><td>
+<font id=pergunta> 
+1 -Em que ano foi iniciado o U.C.M(Universo Cinematográfico Marvel)?</font>
+<br><font id=resposta> 
+<font id=pergunta>(A)</font><input TYPE="checkbox" NAME="question1" VALUE="A"><font id=resposta>2009<br>
+<font id=pergunta>(B)</font><input TYPE="checkbox" NAME="question1" VALUE="B"><font id=resposta>2008<br>
+<font id=pergunta>(C)</font><input TYPE="checkbox" NAME="question1" VALUE="C"><font id=resposta>2004<br>
+<br>
+<font id=pergunta> 
+2 - O que significa a sigla S.H.I.E.L.D.?</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="checkbox" NAME="question2" VALUE="A"><font id=resposta>
+Supreme Headquarters of International Espionage and Law-Enforcement Division(Quartel-general Supremo de Espionagem Internacional e Divisão de Execução da Lei)<br>
+<font id=pergunta>(B)</font><input TYPE="checkbox" NAME="question2" VALUE="B"><font id=resposta>
+Super Heros of Internacional Entity London departament(Entidade de Super Herói Internacional do Departamento de Londres)<br>
+<font id=pergunta>(C)</font><input TYPE="checkbox" NAME="question2" VALUE="C"><font id=resposta>School Help Interclass Eighth Lethal Dose(Escola de Ajuda Intraclasse da Oitava Dose Letal)<br>
+<br>
+<font id=pergunta> 
+3 - Como chama o planeta que Clark Kent/Kal-El extinto antes dele vim para a terra?</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="checkbox" NAME="question3" VALUE="A"><font id=resposta>Warworld<br>
+<font id=pergunta>(B)</font><input TYPE="checkbox" NAME="question3" VALUE="B"><font id=resposta>Krypton<br>
+<font id=pergunta>(C)</font><input TYPE="checkbox" NAME="question3" VALUE="C"><font id=resposta>Kleper<br>
+<br>
+<center>
+<input TYPE="button" NAME="valide" VALUE="Resultado" onclick="javascript:solution(this.form);" style="border:1px solid #f8f8f8;background-color:#ffffff;color:#696969;"> 
+</center></td></form></tr>
+</table> 
+ </body>
+</html>
